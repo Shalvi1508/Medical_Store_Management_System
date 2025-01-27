@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Store Management</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #e0f7fa, #b9fbc0);
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+        text-align: center;
+      }
+      .header {
+        padding: 20px;
+
+        color: #fff;
+      }
+      .form-section {
+        margin: 30px auto;
+        max-width: 400px;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .form-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #d9eafc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+        background: #f9f9f9;
+      }
+      .btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        background: #4da6ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .table-section {
+        margin: 30px auto;
+        max-width: 80%;
+      }
+      .customer {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .customer th,
+      .customer td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      .customer th {
+        background-color: #4da6ff;
+        color: white;
+      }
+      .customer tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 style="text-decoration: underline">
+        Medical Store Management System
+      </h1>
+    </header>
+    <main>
+      <section class="form-section">
+        <h2>Add Customer</h2>
+        <form id="customerForm" class="form-container">
+          <input type="text" id="customer_id" placeholder="CUST001" required />
+          <input
+            type="text"
+            id="customer_name"
+            placeholder="Name e.g.John"
+            required
+          />
+          <input
+            type="text"
+            id="phone_number"
+            placeholder="Phone Number"
+            required
+          />
+          <input
+            type="email"
+            id="email_id"
+            placeholder="abc@gmail.com"
+            required
+          />
+          <button type="submit" class="btn">Add Customer</button>
+          <button type="button" class="btn" onclick="goBackToMenu()">
+            Go Back
+          </button>
+        </form>
+      </section>
+      <section class="table-section">
+        <h2>Customer List</h2>
+        <table class="customer">
+          <thead>
+            <tr>
+              <th>Customer ID</th>
+              <th>Customer Name</th>
+              <th>Phone Number</th>
+              <th>Email ID</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="customerTable"></tbody>
+        </table>
+      </section>
+    </main>
+    <script>
+      function goBackToMenu() {
+        window.location.href = "menu.html";
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

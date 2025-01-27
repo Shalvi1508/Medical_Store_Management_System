@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Pharmacists</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #e0f7fa, #b9fbc0);
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+        text-align: center;
+      }
+      .header {
+        padding: 20px;
+        color: #fff;
+      }
+      .form-section {
+        margin: 30px auto;
+        max-width: 400px;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .form-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #d9eafc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+        background: #f9f9f9;
+      }
+      .btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        background: #4da6ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .table-section {
+        margin: 30px auto;
+        max-width: 80%;
+      }
+      .pharmacist {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .pharmacist th,
+      .pharmacist td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      .pharmacist th {
+        background-color: #4da6ff;
+        color: white;
+      }
+      .pharmacist tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 style="text-decoration: underline">Pharmacist Management</h1>
+    </header>
+    <main>
+      <section class="form-section">
+        <h2>Add Pharmacist</h2>
+        <form id="pharmacistForm" class="form-container">
+          <input
+            type="text"
+            id="pharmacist_id"
+            placeholder="PHARM001"
+            required
+          />
+          <input
+            type="text"
+            id="pharmacist_name"
+            placeholder="Name e.g. John Doe"
+            required
+          />
+          <input
+            type="text"
+            id="phone_number"
+            placeholder="Phone Number"
+            required
+          />
+          <input type="text" id="address" placeholder="Address" required />
+          <button type="submit" class="btn">Save Pharmacist</button>
+          <button type="button" class="btn" onclick="goBackToMenu()">
+            Go Back
+          </button>
+        </form>
+      </section>
+      <section class="table-section">
+        <h2>Pharmacist List</h2>
+        <table class="pharmacist">
+          <thead>
+            <tr>
+              <th>Pharmacist ID</th>
+              <th>Pharmacist Name</th>
+              <th>Phone Number</th>
+              <th>Address</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="pharmacistTable"></tbody>
+        </table>
+      </section>
+    </main>
+    <script>
+      function goBackToMenu() {
+        window.location.href = "menu.html";
+      }
+    </script>
+    <script src="pharmacist.js"></script>
+  </body>
+</html>

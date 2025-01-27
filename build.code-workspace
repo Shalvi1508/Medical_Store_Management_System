@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../Documents/Internship/TODO-APP/todo-application/build"
+		},
+		{
+			"path": "../../Documents/Internship/TODO-APP/todo-application"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../OpenCourseFrontend"
+		}
+	],
+	"settings": {}
+}
